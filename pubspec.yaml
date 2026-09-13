@@ -1,0 +1,39 @@
+name: academia
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.14.0-170.0.dev
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  sqflite: ^2.4.4
+  path: ^1.9.1
+  provider: ^6.1.5+1
+  shared_preferences: ^2.5.5
+  fl_chart: ^1.2.0
+  intl: ^0.20.3
+  google_fonts: ^8.2.1
+  flutter_animate: ^4.5.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - lib/assets/imagenes/logo.png
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "lib/assets/imagenes/logo.png"
+  min_sdk_android: 21
