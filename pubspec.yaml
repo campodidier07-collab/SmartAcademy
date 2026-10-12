@@ -5,7 +5,7 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.14.0-170.0.dev
+  sdk: '>=3.5.0 <4.0.0'
 
 dependencies:
   flutter:
@@ -19,6 +19,16 @@ dependencies:
   intl: ^0.20.3
   google_fonts: ^8.2.1
   flutter_animate: ^4.5.2
+  image_picker: ^1.2.3
+  crypto: ^3.0.7
+  skeletonizer: ^3.0.0
+  pdf: ^3.13.0
+  printing: ^5.15.0
+  lucide_icons_flutter: ^3.1.20
+  path_provider: ^2.1.6
+  qr_flutter: ^4.1.0
+  mobile_scanner: ^7.4.2
+  supabase_flutter: ^2.18.0
 
 dev_dependencies:
   flutter_test:
@@ -31,6 +41,8 @@ flutter:
 
   assets:
     - lib/assets/imagenes/logo.png
+    - lib/assets/imagenes/hero_laptop.jpg
+    - shorebird.yaml
 
 flutter_launcher_icons:
   android: true

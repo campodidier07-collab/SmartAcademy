@@ -1,20 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'controllers/auth_controller.dart';
-import 'controllers/student_controller.dart';
-import 'controllers/teacher_controller.dart';
-import 'controllers/course_controller.dart';
-import 'controllers/grade_controller.dart';
-import 'controllers/attendance_controller.dart';
-import 'controllers/schedule_controller.dart';
-import 'controllers/dashboard_controller.dart';
+import 'controllers/controlador_auth.dart';
+import 'controllers/controlador_estudiantes.dart';
+import 'controllers/controlador_profesores.dart';
+import 'controllers/controlador_cursos.dart';
+import 'controllers/controlador_calificaciones.dart';
+import 'controllers/controlador_asistencias.dart';
+import 'controllers/controlador_horarios.dart';
+import 'controllers/controlador_dashboard.dart';
 
 import 'theme/app_theme.dart';
-import 'screens/splash_screen.dart';
+import 'screens/pantalla_carga.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  
+  await Supabase.initialize(
+    url: 'https://klhramhdlkvxfbpnjoca.supabase.co',
+    // ignore: deprecated_member_use
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtsaHJhbWhkbGt2eGZicG5qb2NhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTEzOTgyMzIsImV4cCI6MjEwNjk3NDIzMn0.CQALcq7LcciFbNqR9xBjKsNaVl3WzB_Rku7mQMt6aKY',
+  );
+
   runApp(const SmartAcademyApp());
 }
 
@@ -39,7 +47,7 @@ class SmartAcademyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: AppTheme.darkTheme,
         darkTheme: AppTheme.darkTheme,
-        themeMode: ThemeMode.system,
+        themeMode: ThemeMode.dark,
         home: const SplashScreen(),
       ),
     );
